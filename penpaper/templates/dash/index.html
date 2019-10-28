@@ -1,35 +1,29 @@
 {% extends 'base.html' %}
 
-{% block title %}Dashboard{% endblock %}
+
 
 {% block r_content %}
-	<div id="sidebar">
-		<button id="edit-pic">Profile Picture</button>
-		<button>Settings</button>
-		<button>Logout</button>
-		<button>Explore</button>
-		<button>My Groups</button>
-		<a href="{{ url_for('dash.journal') }}" id="journal"><button>Journal</button></a>
-		<a href="{{ url_for('dash.past_entries') }}" id="past_entries"><button>Past Entries</button></a>
-		<a href="{{ url_for('dash.calendar') }}" id="calendar"><button>Calendar</button></a>
-		<button id="optional-button-1">(group 1)</button>
-		<button id="optional-button-2">(group 2)</button>
+<head><div id="pnp-title">Pen & Paper</div>
+<link rel = "stylesheet" href = "../../static/style.css" />
+</head>
+<body bgcolor="#f0ead6">
+	<div id="buttonspace">
+		<a id="one" href="{{ url_for('dash.journal') }}">
+			<img id="large-icon" src={{ url_for('static', filename='img/journal.png') }} alt="New Entry">
+		</a>
+
+		<a id="two" href=#>
+			<img class="icon" src={{ url_for('static', filename='img/account.png') }} alt="Account">
+		</a>
+		<a id="three" href="{{ url_for('dash.calendar') }}">
+			<img class="icon" src={{ url_for('static', filename='img/calendar.png') }} alt="Calendar">
+		</a>
+		<a id="four" href="{{ url_for('dash.past_entries') }}">
+			<img class="icon" src={{ url_for('static', filename='img/past_entries.png') }} alt="Past Entries">
+		</a>
+		<a id="five" href=#>
+			<img class="icon" src={{ url_for('static', filename='img/stats.png') }} alt="Stats">
+		</a>
 	</div>
-
-
+	</body>
 {% endblock %}
-	<a href="{{ url_for('dash.jounral') }}">
-<!-- 		<img src={{ url_for('static', filename='img/calendar.png') }} alt="Calendar">
- -->	</a>
-	<a href="{{ url_for('dash.calendar') }}">
-<!-- 		<img src={{ url_for('static', filename='img/calendar.png') }} alt="Calendar">
- -->	</a>
-	<a href="{{ url_for('dash.calendar') }}">
-<!-- 		<img src={{ url_for('static', filename='img/past_entries.png') }} alt="Past Entries">
- -->	</a>
-	<a href="{{ url_for('dash.calendar') }}">
-<!-- 		<img src={{ url_for('static', filename='img/account.png') }} alt="Account">
- -->	</a>
-	<a href="{{ url_for('dash.calendar') }}">
-<!-- 		<img src={{ url_for('static', filename='img/stats.png') }} alt="Stats">
- -->	</a>
